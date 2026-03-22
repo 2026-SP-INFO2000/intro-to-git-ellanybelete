@@ -1,0 +1,48 @@
+#!/bin/bash
+
+# Make the main directory
+mkdir dawgs
+cd dawgs
+
+# Create the player and coach files
+touch Beck.txt Williams.txt Starks.txt Etienne.txt Delp.txt Bell.txt Greene.txt Ratledge.txt Stackhouse.txt Mondon.txt Allen.txt
+touch KirbySmart.txt MikeBobo.txt GlennSchumann.txt
+
+# Organize into subdirectories
+mkdir players coaches
+mv Beck.txt Williams.txt Starks.txt Etienne.txt Delp.txt Bell.txt Greene.txt Ratledge.txt Stackhouse.txt Mondon.txt Allen.txt players/
+mv KirbySmart.txt MikeBobo.txt GlennSchumann.txt coaches/
+mv coaches coachesAndStaff
+
+# Details and navigation as requested
+ls -l
+cd players
+pwd
+ls
+cd ..
+
+cd coachesAndStaff
+ls
+cd ..
+
+# Rivals and Medals
+mkdir rivals
+cd rivals
+touch florida.txt tech.txt alabama.txt
+cd ..
+
+mkdir medals
+cd medals
+touch 2022.txt 2021.txt 1980.txt 1942.txt
+cd ..
+
+# Copying all files to one spot
+mkdir allFiles
+cp players/*.txt allFiles/
+cp coachesAndStaff/*.txt allFiles/
+cp medals/*.txt allFiles/
+cp rivals/*.txt allFiles/
+
+# Delete rivals and finish
+rm -r rivals/
+cd ..

@@ -1,0 +1,47 @@
+#!/bin/bash
+
+# Move into the folder
+cd ~/Desktop/organized_structure
+
+# Create the categories
+mkdir -p entertainment recipes sports technology travel
+
+# Move the files you have (like entertainment_file1.txt, etc.)
+mv entertainment* entertainment/ 2>/dev/null
+mv recipes* recipes/ 2>/dev/null
+mv sports* sports/ 2>/dev/null
+mv technology* technology/ 2>/dev/null
+mv travel* travel/ 2>/dev/null
+
+# Create the output file for your professor
+ls -F > output.txt
+echo -e "\n--- Subdirectory Contents ---" >> output.txt
+ls -R >> output.txt
+
+# Go back to Desktop
+cd ..#!/bin/bash
+
+# 1. Rename the folder you just moved to the Desktop
+mv disorganized_structure organized_structure
+
+# 2. Go inside the new folder
+cd organized_structure
+
+# 3. Create the categories
+mkdir entertainment recipes sports technology travel
+
+# 4. Move your files into the new folders
+# This uses the files you uploaded (like entertainment_file1.txt)
+mv entertainment* entertainment/ 2>/dev/null
+mv recipes* recipes/ 2>/dev/null
+mv sports* sports/ 2>/dev/null
+mv technology* technology/ 2>/dev/null
+mv travel* travel/ 2>/dev/null
+
+# 5. Create the output file for the professor
+ls -F > output.txt
+echo -e "\n--- Subdirectory Contents ---" >> output.txt
+ls -R entertainment/ recipes/ sports/ technology/ travel/ >> output.txt
+
+# 6. Step back out to the Desktop
+cd ..
